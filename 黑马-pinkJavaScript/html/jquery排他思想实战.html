@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+            line-height: 80px;
+        }
+
+        li {
+            list-style: none;
+            width: 100%;
+            background-color: pink;
+            text-align: center;
+            cursor: pointer;
+            /* line-height: 10px; */
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 560px;
+            height: 560px;
+            /* background-color: red; */
+        }
+
+        .nav {
+            float: left;
+            width: 60px;
+            height: 100%;
+        }
+
+        .ch_imgs {
+            position: relative;
+            float: left;
+            width: 500px;
+            height: 100%;
+        }
+
+        img {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="../JavaScript/jQuery.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="nav">
+            <ul>
+                <li><a href="javascript:;">桃子</a></li>
+                <li><a href="javascript:;">华子</a></li>
+                <li><a href="javascript:;">宫儿</a></li>
+                <li><a href="javascript:;">雨儿</a></li>
+                <li><a href="javascript:;">全家1</a></li>
+                <li><a href="javascript:;">全家2</a></li>
+                <li><a href="javascript:;">全家3</a></li>
+            </ul>
+        </div>
+        <div class="ch_imgs">
+            <img src="../images/img1.jpg" alt="">
+            <img src="../images/img12.jpg" alt="">
+            <img src="../images/img7.jpg" alt="">
+            <img src="../images/img4.jpg" alt="">
+            <img src="../images/img22.jpg" alt="">
+            <img src="../images/img23.jpg" alt="">
+            <img src="../images/img24.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        //生成li的高度
+        var liHeight = $('.box')[0].offsetWidth / $('ul').children().length;
+        // console.log($('.box')[0].offsetWidth);
+        // console.log($('ul').children().length);
+        $('li').css("height", liHeight);
+        // console.log(liHeight);
+        $('li').css("line-heigsht", liHeight);
+        $('.ch_imgs img:first')
+
+        //先假定第一个选项是显式的
+        $('ul li:first').css('background-color', 'orange');
+        $('.ch_imgs img:first').css('display', 'block');
+
+        //绑定点击事件
+        $('li').click(function (e) {
+            $(this).css("background", "orange");
+            $(this).siblings().css("background", "pink");
+            // console.log($(this).index());
+            index = $(this).index();
+            // $('.ch_imgs img').eq(index).show();
+            // $('.ch_imgs img').eq(index).siblings('img').hied();
+            // $('.ch_imgs img').eq(index).css('display', 'block');
+            // $('.ch_imgs img').eq(index).siblings('img').css('display', 'none');
+
+            //链式编程
+            $('.ch_imgs img').eq(index).css('display', 'block').siblings('img').css('display', 'none');
+        });
+
+
+    </script>
+</body>
+
+</html>
