@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>仿京东放大图片效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        .preview_img{
+            display: inline-block;
+            position: relative;
+            width: 350px;
+            height: 350px;
+            margin-top: 10px;
+            margin-left: 10px;
+            cursor: move;
+            overflow: hidden;
+        }
+        .mask{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(254, 225, 148, .5);
+        }
+    </style>
+</head>
+<body>
+    <div class="preview_img">
+        <img src="../images/仿京东图片放大.jpg" alt="wahtch">
+        <div class="mask"></div>
+    </div>
+
+    <script>
+        var preview_img = document.querySelector('.preview_img');
+        var mask = document.querySelector('.mask');
+        preview_img.addEventListener('mouseover', function(){
+            mask.style.display = 'block';
+            document.addEventListener('mousemove', move);
+            function move(event) {
+                x = event.pageX - preview_img.offsetLeft;           
+                y = event.pageY - preview_img.offsetTop;
+                maskX = x - mask.offsetWidth / 2;
+                maskY = y - mask.offsetHeight / 2;
+                sub_width = preview_img.offsetWidth - mask.offsetWidth;
+                sub_height = preview_img.offsetHeight - mask.offsetHeight;
+                if(maskX < 0){
+                    mask.style.left = 0;
+                }else if(maskX > sub_width){
+                    mask.style.left = sub_width;
+                }else{
+                    mask.style.left = maskX  + 'px';
+                }
+                if(maskY < 0){
+                    mask.style.top = 0;
+                }else if(maskY > sub_height){
+                    mask.style.top = sub_height;
+                }else{
+                    mask.style.top = maskY + 'px';
+                }
+            }
+        });
+        preview_img.addEventListener('mouseout', function(){
+            mask.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

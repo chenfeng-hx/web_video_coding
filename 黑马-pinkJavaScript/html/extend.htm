@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="../JavaScript/jQuery.js"></script>
+    <script>
+        obj1 = {};
+        obj2 = {
+            name: "xiaohua",
+            age: 20,
+            sex:{
+                gender: "female"
+                }
+        };
+        obj3 = {
+            name: "xiaoming",
+            sex: {
+                gender: "male",
+                nick: "none"
+            }
+        }
+        // 浅拷贝
+        $.extend(obj1, obj2);
+        console.log(obj1);
+        console.log(obj2);
+        // 深拷贝
+        $.extend(true, obj3, obj2);
+        console.log(obj2);
+        console.log(obj3);
+        
+    </script>
+</body>
+</html>
