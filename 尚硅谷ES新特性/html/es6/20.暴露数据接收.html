@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        // 引入 暴露 出的数据
+        import * as data from "../js/19.数据暴露.js"
+        console.log(data)
+
+        // 1, 通用方式
+        import * as m1 from "../js/09.Symbol.js";
+        // 2. 解构赋值的形式
+        import {name, abc} from "../js/09.Symbol.js";
+        import {name as www, xiao} from "../js/19.数据暴露.js";  // 如果出现同名的情况要起别名，不然会报错
+        import {default as m} from "../js/19.数据暴露.js";  // 获取默认的暴露必须要起别名，不能使用 default
+        // 3, 简便形式(只针对默认暴露)
+        import data from "../js/19.数据暴露.js"
+
+    </script>
+
+    <script src="../js/20.数据接收.js" type="module"></script>
+</body>
+</html>
+
+<!-- // 此处会报跨域错误，需要下载 vscode 中的 liveserver 插件
+
+// 没有解决 -->
+
+<!-- 解决了，同一时间，命令面板（右键或F1）搜索 liveserver，点击 在 浏览器中打开即可 -->
