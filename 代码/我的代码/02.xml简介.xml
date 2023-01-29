@@ -1,0 +1,11 @@
+<!-- 比如说我有一个学生数据：name = "孙悟空" ; age = 18 ; gender = "男" ;
+用 XML 表示： -->
+
+<student>
+    <name>孙悟空</name>
+    <age>18</age>
+    <gender>男</gender>
+</student>
+
+<!-- 用 JSON 表示： -->
+{"name":"孙悟空","age":18,"gender":"男"}
