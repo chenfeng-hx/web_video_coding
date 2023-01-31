@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点我抽奖</button>
+
+    <script>
+        /*
+            点击按钮，1s 后显示是否中将（30%的中奖概率）
+            中将和不中奖都弹出相应的提示信息
+        */
+        const btn = document.querySelector('button');
+        function rand(m, n) {
+            return Math.ceil(Math.random() * (n - m + 1)) + m - 1;
+        };
+        btn.addEventListener('click', function () {
+            // 定时器
+            // setTimeout(() => {
+            //     let n = rand(1, 100);
+            //     if (n <= 30) {
+            //         alert('恭喜你，抽中了!');
+            //     } else {
+            //         alert('再接再厉!');
+            //     }
+            // }, 1000);
+
+            const p = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    // 抽奖，获取到从 1 到 100 的一个随机数
+                    let n = rand(1, 100);
+                    console.log(n);
+                    //判断
+                    if (n <= 30) {
+                        resolve(n);    //将promise对象的状态设置为成功
+                    } else {
+                        reject(n);    //将promise对象的状态设置为失败
+                    };
+                }, 1000);
+            });
+            // 调用 then 方法
+            p.then(value => {
+                console.log('恭喜你，抽中了！中奖号为:' + value); 
+            }, reason => {
+                console.log('再接再厉! 您的数字为:' + reason);
+            });
+        })
+    </script>
+</body>
+
+</html>
