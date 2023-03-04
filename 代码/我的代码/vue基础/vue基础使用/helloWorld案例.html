@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello world 案例</title>
+</head>
+<body>
+    <!-- 准备一个容器 -->
+    <div id="root">
+        <!-- <h1>Hello world</h1> -->
+        <!-- 使用插值法写入动态数值 -->
+        <h1>Hello, 我的名字是{{msg}}</h1>
+        <h2>我的年龄是{{age}}</h2>   
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script>
+        // 创建 Vue 实例  这里 const x = 其实不是必须的，因为并没有用到实例对象
+        const v = new Vue({
+            el: '#root', // el: element 的简写，用于指定当前 Vue 实例为哪个容器服务，值通常为 css 选择器字符串
+            // el: document.getElementById('root')   // 较为笨重的写法
+            data: {//data中用于存储数据，数据供el所指定的容器去使用，值我们暂时先写成一个对象。
+                // msg: 'Hello world -vue'
+                msg: '小明',
+                age: 13
+            }
+        });
+    </script>
+</body>
+</html>

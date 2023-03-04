@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.js"></script>
+    <script src="../../js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="login">
+        <input type="text" name="" id="family">
+        <input type="text" name="" id="name">
+        姓氏：<div class="family"></div>
+        名称：<div class="name"></div>
+        <span></span>
+    </div>
+    <script>
+        let _value1 = $('#family');
+        let _value2 = $('#name');
+        const vm = new Vue({
+            el: '#login',
+            data(){
+                return {
+                    
+                }
+            }
+        });
+    </script>
+</body>
+</html>
