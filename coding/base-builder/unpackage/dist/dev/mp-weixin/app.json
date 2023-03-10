@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/newsDetail/newsDetail"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "星星新闻",
+    "navigationBarBackgroundColor": "#31C27C",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#31C27C",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/首页S.png",
+        "selectedIconPath": "static/images/首页.png"
+      },
+      {
+        "text": "个人",
+        "pagePath": "pages/user/user",
+        "iconPath": "static/images/资讯.png",
+        "selectedIconPath": "static/images/资讯S.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
