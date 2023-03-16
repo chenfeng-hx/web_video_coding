@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;padding:0
+        }
+        .box{
+            width:500px;
+            height:500px;
+            border:10px solid gray;
+            margin:100px auto;
+            /* 触发网格 */
+            display: grid;
+            /* 划分行列 */
+            grid-template-rows: 100px 100px 100px ;
+            grid-template-columns: 100px 100px 100px;
+            /* 调整间距 */
+            /* grid-row-gap: 20px;
+            grid-column-gap: 30px; */
+            grid-gap:20px 30px
+        }
+    </style>
+</head>
+<body>
+    <!-- 容器 -->
+    <div class="box"></div>
+</body>
+</html>
