@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;padding:0
+        }
+        .bigbox{
+            width:500px;
+            height:500px;
+            border:10px solid gray;
+            margin:100px auto;
+            /* 触发弹性盒子 */
+            display: flex;
+            /* 侧轴上面的对其方式 */
+            align-items: stretch;
+        }
+        .bigbox>div{
+            width:50px;
+            /* height:50px; */
+            border:2px dashed red
+        }
+        /* 
+            属性:align-items:用于调整侧轴上面的项目对其方式
+                flex-start===侧轴的开始位置显示
+                flex-end=====侧轴的结束位置显示
+                center=======侧轴的居中位置显示
+                baseline=====侧周的基线位置显示,效果与开始位置一致,实际开发的时候不会使用该属性值
+                stretch======默认的拉伸效果,前提,项目不需要设置高度
+        */
+    </style>
+</head>
+<body>
+    <!-- 容器 -->
+    <div class="bigbox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

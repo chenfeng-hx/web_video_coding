@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;padding:0
+        }
+        .bigbox{
+            width:500px;
+            height:500px;
+            border:10px solid gray;
+            margin:100px auto;
+            /* 触发弹性盒子 */
+            display: flex;
+            /* 折行 */
+            flex-wrap: wrap;
+            /* 调整行间距属性 */
+            align-content:space-evenly
+        }
+        .bigbox>div{
+            width:50px;
+            height: 50px;
+            border:2px dashed red;
+        }
+        /* 
+            属性:align-content========调整行间距,侧轴上面进行显示
+                flex-start============侧轴的开始位置显示(没有行间距的)
+                flex-end==============侧轴的结束位置显示(没有行间距的)
+                center================侧轴的居中位置显示(没有行间距的)
+                space-between=========两端对其
+                space-around==========两端环绕
+                space-evenly==========行间距均分
+        */
+    </style> 
+</head>
+<body>
+    <!-- 容器 -->
+    <div class="bigbox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .bigbox {
+            width: 500px;
+            height: 500px;
+            border: 10px solid gray;
+            margin: 100px auto;
+            /* 触发 */
+            display: flex;
+            /* 调整主轴方向 */
+            flex-direction: column-reverse;
+        }
+
+        .bigbox>div {
+            width: 50px;
+            height: 50px;
+            border: 2px dashed red;
+        }
+
+        /* 修改主轴方向
+            属性:flex-direction
+                row============主轴在横向,并且以开始位置显示(*)
+                row-reverse====主轴在横向,并且以相反方向位置显示
+                column=========主轴在纵向,并且以开始位置显示(*)
+                column-reverse=主轴在纵向,并且以相反方向位置显示
+        */
+    </style>
+</head>
+
+<body>
+    <!-- 容器 -->
+    <div class="bigbox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+
+</html>
