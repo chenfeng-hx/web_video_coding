@@ -1,0 +1,29 @@
+<!-- 当前代码编辑信息:
+        由用户 尘封 使用 WebStorm 在 “常见的页面布局方式” 中
+        于 2023-03-19 20:23:13 编写而成！
+        祝你食用愉快！！！ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>固定的 header 和 footer</title>
+	<style>
+		.parent {
+			display: grid;
+			grid-template-rows: auto 1fr auto;
+			margin: 0 auto;
+		}
+		.section1 { background-color: blue; }
+		.section2 { background-color: coral; }
+		.section3 { background-color: purple; }
+	</style>
+</head>
+<body>
+<!-- 注释 -->
+	<div class="parent">
+		<header class="section1" contenteditable>Herder</header>
+		<main class="section2" contenteditable>Main</main>
+		<footer class="section3" contenteditable>Footer</footer>
+	</div>
+</body>
+</html>

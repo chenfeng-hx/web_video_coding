@@ -1,0 +1,49 @@
+<!-- 当前代码编辑信息:
+        由用户 尘封 使用 WebStorm 在 “常见的页面布局方式” 中
+        于 2023-03-19 20:57:03 编写而成！
+        祝你食用愉快！！！ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>卡片弹性自适应</title>
+	<style>
+		.parent {
+			height: auto;
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.visual {
+			height: 100px;
+			width: 100%;
+		}
+		.card {
+			display: flex;
+			flex-direction: column;
+			padding: 1rem;
+			justify-content: space-between;
+		}
+	</style>
+</head>
+<body>
+<!-- 注释 -->
+	<div class="parent" style="background-color: white;">
+		<div class="card" style="background-color: yellow;">
+			<h3>Title - Card 1</h3>
+			<p contenteditable>Medium length description with a few more words here.</p>
+			<div class="visual" style="background-color: pink;"></div>
+		</div>
+		<div class="card" style="background-color: yellow;">
+			<h3>Title - Card 2</h3>
+			<p contenteditable>Long Description. Lorem ipsum dolor sit, amet consectetur adipisicir...</p>
+			<div class="visual" style="background-color: blue;"></div>
+		</div>
+		<div class="card" style="background-color: yellow;">
+			<h3>Title - Card 3</h3>
+			<p contenteditable>Short Decrsiption.</p>
+			<div class="visual" style="background-color: green;"></div>
+		</div>
+	</div>
+</body>
+</html>

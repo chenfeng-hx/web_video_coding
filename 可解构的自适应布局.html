@@ -1,0 +1,33 @@
+<!-- 当前代码编辑信息:
+        由用户 尘封 使用 WebStorm 在 “常见的页面布局方式” 中
+        于 2023-03-19 20:08:47 编写而成！
+        祝你食用愉快！！！ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>可解构的自适应布局</title>
+	<style>
+		.parent {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			background-color: blue;
+		}
+		.box {
+			flex: 1 1 150px;    /* flex-grow:1, 表示自动延展到最大宽度 */
+			flex: 0 1 150px;    /* No stretching */
+			margin: 5px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+<!-- 注释 -->
+	<div class="parent">
+		<div class="box">1</div>
+		<div class="box">2</div>
+		<div class="box">3</div>
+	</div>
+</body>
+</html>

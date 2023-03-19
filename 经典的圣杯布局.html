@@ -1,0 +1,43 @@
+<!-- 当前代码编辑信息:
+        由用户 尘封 使用 WebStorm 在 “常见的页面布局方式” 中
+        于 2023-03-19 20:43:21 编写而成！
+        祝你食用愉快！！！ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>经典的圣杯布局</title>
+	<style>
+		.parent {
+			display: grid;
+			grid-template: auto 1fr auto / auto 1fr auto;
+		}
+		header {
+			padding: 2rem;
+			grid-column: 1 / 4;
+		}
+		.left-side {
+			grid-column: 1 / 2;
+		}
+		main {
+			grid-column: 2 / 3;
+		}
+		.right-side {
+			grid-column: 3 / 4;
+		}
+		footer {
+			grid-column: 1 / 4;
+		}
+	</style>
+</head>
+<body>
+<!-- 注释 -->
+	<div class="parent">
+		<header class="section" style="background-color: pink;">Header</header>
+		<div class="left-side section" contenteditable style="background-color: blue;">Left SideBar</div>
+		<main class="section" style="background-color: coral;" contenteditable>Main Content</main>
+		<div class="right-side section" contenteditable style="background-color: yellow;">Right SideBar</div>
+		<footer class="section" style="background-color: green;">Footer</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!-- 当前代码编辑信息:
+        由用户 尘封 使用 WebStorm 在 “常见的页面布局方式” 中
+        于 2023-03-19 19:52:38 编写而成！
+        祝你食用愉快！！！ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>超级居中</title>
+	<style>
+		/* 方式一：flex布局 */
+		/*.parent {*/
+		/*	width: 200px;*/
+		/*	height: 200px;*/
+		/*	border: 1px solid red;*/
+		/*	display: flex;*/
+		/*}*/
+		/*.child {*/
+		/*	width: 40px;*/
+		/*	height: 40px;*/
+		/*	border: 1px dashed blue;*/
+		/*	margin: auto;*/
+		/*}*/
+		/* 方式二：Grid 布局 */
+		/*.parent {*/
+		/*	width: 200px;*/
+		/*	height: 200px;*/
+		/*	border: 1px solid red;*/
+		/*	display: grid;*/
+		/*}*/
+		/*.child {*/
+		/*	width: 40px;*/
+		/*	height: 40px;*/
+		/*	border: 1px dashed blue;*/
+		/*	margin: auto;*/
+		/*}*/
+		/* 方式三： Grid 布局 */
+		.parent {
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+			display: grid;
+			place-items: center;
+		}
+		.child {
+			width: 40px;
+			height: 40px;
+			border: 1px dashed blue;
+		}
+	</style>
+</head>
+<body>
+<!-- 注释 -->
+	<div class="parent">
+		<div class="child" contenteditable>
+			:)
+		</div>
+	</div>
+</body>
+</html>
