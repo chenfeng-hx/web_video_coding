@@ -196,13 +196,9 @@ userInput = 'new Input'
 
 
 
-
-
-# 此处上传七牛云
-
 ## 接口
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230317180115817.png" alt="image-20230317180115817" style="zoom:33%;" />
+<img src="http://rrnsabhfu.hb-bkt.clouddn.com/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230317175829295.png" style="zoom:33%;" >
 
 ```typescript
 interface Point {
@@ -269,15 +265,13 @@ type MyWindow = {
 
 在 TS 无法推断出一个获取到的值的类型时，可以通过断言给定一个或多个类型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318092558453.png" alt="image-20230318092558453" style="zoom: 33%;" />
-
-
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318092558453.png" alt="image-20230318092558453" style="zoom: 33%;" />
 
 
 
 ## 文字类型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318092652232.png" alt="image-20230318092652232" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318092652232.png" alt="image-20230318092652232" style="zoom:33%;" />
 
 ```typescript
 let testString = 'Hello World'
@@ -337,7 +331,7 @@ handleRequest(req.url, req.method)
 
 ## null 和 undefined 类型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318093422851.png" alt="image-20230318093422851" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318093422851.png" alt="image-20230318093422851" style="zoom:33%;" />
 
 ```typescript
 let x: undefined = undefined
@@ -365,7 +359,7 @@ function liveDangerously(x?: number | null) {
 
 是 TS 中的一种语法，编译为 JS 后会发生很大的变化
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318093845942.png" alt="image-20230318093845942" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318093845942.png" alt="image-20230318093845942" style="zoom:33%;" />
 
 ```typescript
 enum Direction {
@@ -399,7 +393,7 @@ console.log(Direction.Down);
 
 ## 不太常用的原语
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318094248803.png" alt="image-20230318094248803" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318094248803.png" alt="image-20230318094248803" style="zoom:33%;" />
 
 
 
@@ -409,13 +403,13 @@ console.log(Direction.Down);
 
 ## 什么是类型缩小
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318094755890.png" alt="image-20230318094755890" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318094755890.png" alt="image-20230318094755890" style="zoom:33%;" />
 
 
 
 ## typeof类型守卫
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318094850770.png" alt="image-20230318094850770" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318094850770.png" alt="image-20230318094850770" style="zoom:33%;" />
 
 ```typescript
 function printAll(strs: string | string[] | null) {
@@ -437,7 +431,7 @@ function printAll(strs: string | string[] | null) {
 
 ## 真值缩小
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318095332295.png" alt="image-20230318095332295" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318095332295.png" alt="image-20230318095332295" style="zoom:33%;" />
 
 ```typescript
 function printAll(strs: string | string[] | null) {
@@ -472,7 +466,7 @@ console.log(multiplyAll(undefined, 2))
 
 ## 等值缩小
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318095929040.png" alt="image-20230318095929040" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318095929040.png" alt="image-20230318095929040" style="zoom:33%;" />
 
 ```typescript
  function example(x: string | number, y: string | boolean) {
@@ -520,7 +514,7 @@ multiplyValue({ value: '5' }, 6)   // 报错
 
 ## in 操作符缩小
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318100355690.png" alt="image-20230318100355690" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318100355690.png" alt="image-20230318100355690" style="zoom:33%;" />
 
 ```typescript
 type Fish = { swim: () => void }
@@ -542,7 +536,7 @@ function move(animal: Fish | Bird | Human) {
 
 ## instanceof操作符缩小
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318100937581.png" alt="image-20230318100937581" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318100937581.png" alt="image-20230318100937581" style="zoom:33%;" />
 
 ```typescript
 function logValue(x: Date | string) {
@@ -563,7 +557,7 @@ logValue('hello ts')
 
 表达式左侧的变量的类型会因为右侧可能返回的值而缩小类型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318101200455.png" alt="image-20230318101200455" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318101200455.png" alt="image-20230318101200455" style="zoom:33%;" />
 
 ```typescript
  // let x : string | number
@@ -587,7 +581,7 @@ x = true
 
 通过控制结构缩小数据的类型范围
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318102743701.png" alt="image-20230318102743701" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318102743701.png" alt="image-20230318102743701" style="zoom:33%;" />
 
 ```typescript
 function example() {
@@ -620,7 +614,7 @@ x = true
 
 ## 使用类型谓词
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318102936320.png" alt="image-20230318102936320" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318102936320.png" alt="image-20230318102936320" style="zoom:33%;" />
 
 ```typescript
 type Fish = {
@@ -728,7 +722,7 @@ type Shape = Circle | Square
 
 可以将 never 类型分配给任何类型，但是不能将任何类型分配给 never 类型（定义的变量）
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318105047001.png" alt="image-20230318105047001" style="zoom: 33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318105047001.png" alt="image-20230318105047001" style="zoom: 33%;" />
 
 ```typescript
 interface Circle {
@@ -771,7 +765,7 @@ function getArea(shape: Shape) {
 
 ## 函数类型表达式
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318110929563.png" alt="image-20230318110929563" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318110929563.png" alt="image-20230318110929563" style="zoom:33%;" />
 
 ```typescript
 type GreetFunction = (a: string) => void
@@ -791,7 +785,7 @@ greeter(printToConsole)
 
 ## 调用签名
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318111636591.png" alt="image-20230318111636591" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318111636591.png" alt="image-20230318111636591" style="zoom:33%;" />
 
 ```typescript
 type DescribableFunction = {
@@ -816,7 +810,7 @@ doSomething(fn1)
 
 ## 构造签名
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318131052254.png" alt="image-20230318131052254" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318131052254.png" alt="image-20230318131052254" style="zoom:33%;" />
 
 ```typescript
 class Ctor {
@@ -853,13 +847,13 @@ function fn(date: CallOrConstructor) {
 
 保证输入数据的类型和输出类型的数据相同，即：==根据我们输入的数据类型推断出函数应该输出的数据类型==
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318131315029.png" alt="image-20230318131315029" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318131315029.png" alt="image-20230318131315029" style="zoom:33%;" />
 
 
 
 ## 限制条件
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318132017212.png" alt="image-20230318132017212" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318132017212.png" alt="image-20230318132017212" style="zoom:33%;" />
 
 ```typescript
 function longest<Type extends { length: number }>(a: Type, b: Type) {
@@ -879,7 +873,7 @@ const notOk = longest(10, 100)
 
 ## 使用受限值
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318132414849.png" alt="image-20230318132414849" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318132414849.png" alt="image-20230318132414849" style="zoom:33%;" />
 
 ```typescript
 function minimumLength<Type extends { length: number }>(
@@ -901,7 +895,7 @@ console.log(arr.slice(0))
 
 ## 指定类型参数
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318132729663.png" alt="image-20230318132729663" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318132729663.png" alt="image-20230318132729663" style="zoom:33%;" />
 
 
 
@@ -950,7 +944,7 @@ function greet2(s: string) {
 
 ## 函数的可选参数
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318135214196.png" alt="image-20230318135214196" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318135214196.png" alt="image-20230318135214196" style="zoom:33%;" />
 
 ```typescript
 function f(n: number = 100) {
@@ -988,7 +982,7 @@ myForEach([1, 2, 3], (a, i) => {
 
 ## 函数重载
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318141351767.png" alt="image-20230318141351767" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318141351767.png" alt="image-20230318141351767" style="zoom:33%;" />
 
 ```typescript
 function makeDate(timestamp: number): Date
@@ -1060,7 +1054,7 @@ len(Math.random() > 0.5 ? 'hello' : [4, 5, 6])
 
 在 TS 中允许传入一个叫做 this 的参数，同时支持给这个叫 this 的参数指明类型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318143156788.png" alt="image-20230318143156788" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318143156788.png" alt="image-20230318143156788" style="zoom:33%;" />
 
 ```typescript
 interface User {
@@ -1100,15 +1094,15 @@ console.log(admins)
 
 ## 需要了解的其他类型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318143652442.png" alt="image-20230318143652442" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318143652442.png" alt="image-20230318143652442" style="zoom:33%;" />
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318143737780.png" alt="image-20230318143737780" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318143737780.png" alt="image-20230318143737780" style="zoom:33%;" />
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318143818745.png" alt="image-20230318143818745" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318143818745.png" alt="image-20230318143818745" style="zoom:33%;" />
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318143859221.png" alt="image-20230318143859221" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318143859221.png" alt="image-20230318143859221" style="zoom:33%;" />
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318143943694.png" alt="image-20230318143943694" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318143943694.png" alt="image-20230318143943694" style="zoom:33%;" />
 
 
 
@@ -1128,7 +1122,7 @@ console.log(a)
 
 ## 参数展开运算符—实参展开
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318145043421.png" alt="image-20230318145043421" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318145043421.png" alt="image-20230318145043421" style="zoom:33%;" />
 
 ```typescript
 /* const arr1 = [1, 2, 3]
@@ -1150,7 +1144,7 @@ const angle = Math.atan2(...args) */
 
 ## 参数结构
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318145344814.png" alt="image-20230318145344814" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318145344814.png" alt="image-20230318145344814" style="zoom:33%;" />
 
 ```typescript
 type ABC = { a: number, b: number, c: number }
@@ -1170,7 +1164,7 @@ sum({
 
 ## 函数返回 void 类型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230318145607679.png" alt="image-20230318145607679" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230318145607679.png" alt="image-20230318145607679" style="zoom:33%;" />
 
 ```typescript
 type voidFunc = () => void
@@ -1341,7 +1335,7 @@ const cc: ColorCircle = {
 
 ## 交叉类型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230319084324826.png" alt="image-20230319084324826" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230319084324826.png" alt="image-20230319084324826" style="zoom:33%;" />
 
 ```typescript
 interface Colorful {
@@ -1406,7 +1400,7 @@ type Sister = {
 
 ## 泛型对象类型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230319085001528.png" alt="image-20230319085001528" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230319085001528.png" alt="image-20230319085001528" style="zoom:33%;" />
 
 
 
@@ -1416,7 +1410,7 @@ type Sister = {
 
 ## 从类型中创建类型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230319085822878.png" alt="image-20230319085822878" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230319085822878.png" alt="image-20230319085822878" style="zoom:33%;" />
 
 
 
@@ -1424,13 +1418,13 @@ type Sister = {
 
 ## 泛型
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230319090106282.png" alt="image-20230319090106282" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230319090106282.png" alt="image-20230319090106282" style="zoom:33%;" />
 
 
 
 ### 使用通用类型变量
 
-<img src="C:\Users\尘封\AppData\Roaming\Typora\typora-user-images\image-20230319090202904.png" alt="image-20230319090202904" style="zoom:33%;" />
+<img src="http://xiaohai-hx.cn/%E5%8D%83%E9%94%8B%E6%95%99%E8%82%B2TypeScript/image-20230319090202904.png" alt="image-20230319090202904" style="zoom:33%;" />
 
 ```typescript
 function loggingIdentity<Type>(arg: Array<Type>): Type[] {
